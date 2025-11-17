@@ -1,0 +1,128 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header, footer {
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+}
+
+section {
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card img {
+  max-height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.carousel-inner img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+}
+
+.card-body p {
+  margin-bottom: 0;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+.btn-saiba-mais {
+  margin-top: 1rem;
+}
+.btn-saiba-mais:hover {
+  background-color: #343a40;
+  color: #fff;
+}
+.text-center {
+  text-align: center !important;
+}
+.shadow-sm {
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+}
+.h-100 {
+  height: 100% !important;
+}
+.col-md-4 {
+  flex: 0 0 auto;
+  width: 33.333333% !important;
+  padding: 0.5rem;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.detalhe-img {
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .detalhe-img {
+    max-height: 300px;
+    object-fit: cover;
+  }
+}
+.about-card {
+  padding: 0.5rem;
+  gap: 1rem;             
+  align-items: center;
+  display: flex !important; 
+}
+
+.about-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 0;             
+  flex: 0 0 150px;       
+  border-radius: 0.5rem;
+}
+
+.about-card .card-body {
+  padding: 0.75rem 1rem;
+  flex: 1;               
+}
+@media (max-width: 767px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-card img {
+    margin-bottom: 0.5rem;
+    flex: 0 0 auto;
+  }
+  .about-card .card-body {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}

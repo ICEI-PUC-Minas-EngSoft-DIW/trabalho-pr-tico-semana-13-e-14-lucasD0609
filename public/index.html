@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Música Indie Brasileira">
+  <title>Música Indie BR</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="bg-dark text-white py-3">
+  <div class="container d-flex justify-content-between align-items-center">
+    <h1 class="h3 m-0">Artistas & Álbuns Underground</h1>
+    <nav>
+      <a href="visualizacao.html" class="btn btn-outline-info me-2">Visualizar Dados</a> <!-- NOVO LINK -->
+      <a href="cadastro_album.html" class="btn btn-outline-light">Cadastrar Novo Álbum</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="text-center p-4">
+    <div class="container">
+      <p>Os artistas underground representam a cena musical independente, criando obras originais e autênticas fora do circuito comercial tradicional. Aqui você encontra alguns nomes da cena brasileira que merecem destaque.</p>
+    </div>
+  </section>
+
+  <section>
+    <img src="assets/img/felizes.png" alt="Banner destaque" class="img-fluid w-100">
+  </section>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Destaques da Cena Indie</h2>
+      <div id="lista-albuns" class="row">
+        <!-- Álbuns serão carregados aqui por app.js -->
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Sobre o Aluno</h2>
+      <div class="card shadow-lg mx-auto d-flex flex-row flex-wrap align-items-center p-3 about-card" style="max-width: 800px;">
+        <img src="assets/img/perfil.png" alt="Foto do aluno" class="rounded me-3 mb-3 mb-md-0" style="width:150px; height:150px; object-fit:cover;">
+        <div class="card-body">
+          <h5 class="card-title">Lucas Damacena de Souza</h5>
+          <p class="card-text">Estudante de Desenvolvimento de Interfaces Web, entusiasta da cena musical independente brasileira e criador deste projeto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Indique um Artista</h2>
+      <form class="mx-auto" style="max-width: 500px;">
+        <input type="text" class="form-control mb-3" placeholder="Seu nome">
+        <input type="text" class="form-control mb-3" placeholder="Nome do artista">
+        <textarea class="form-control mb-3" rows="4" placeholder="Por que esse artista merece destaque?"></textarea>
+        <button type="submit" class="btn btn-dark w-100">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-0">© 2025 - Todos os direitos reservados</p>
+</footer>
+
+<script src="assets/scripts/app.js"></script>
+</body>
+</html>

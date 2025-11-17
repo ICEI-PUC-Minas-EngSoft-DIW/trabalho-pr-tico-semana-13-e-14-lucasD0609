@@ -9,10 +9,10 @@ Sugerimos o uso das seguintes ferramentas acessíveis: [FullCalendar](https://fu
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Lucas Damacena de Souza
+- Matricula: 901048
+- Proposta de projeto escolhida: Música Indie Brasileira
+- Breve descrição sobre seu projeto: O projeto apresenta uma galeria dinâmica de álbuns de música indie brasileira, com informações sobre artistas, estilos e datas de lançamento.
 
 **Print da tela com a implementação**
 

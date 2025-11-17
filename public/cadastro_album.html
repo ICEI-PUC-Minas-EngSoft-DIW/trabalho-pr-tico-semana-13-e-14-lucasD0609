@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Novo Álbum</title>
+  <!-- Link para o Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <header class="bg-dark text-white text-center py-3">
+    <h1 class="h4">Cadastrar Novo Álbum</h1>
+  </header>
+
+  <main class="container py-5">
+    <!-- Formulário que envia os dados para a API -->
+    <form id="formAlbum" class="shadow p-4 rounded bg-white mx-auto" style="max-width:700px;">
+      <h3 class="h5 mb-4 text-center">Dados do Álbum</h3>
+      <input type="text" name="titulo" class="form-control mb-2" placeholder="Título do Álbum" required>
+      <input type="text" name="autor" class="form-control mb-2" placeholder="Autor/Artista" required>
+      <input type="text" name="categoria" class="form-control mb-2" placeholder="Categoria (ex: Rap, Plugg)" required>
+      <input type="text" name="data" class="form-control mb-2" placeholder="Data de Lançamento (ex: 25/11/2022)">
+      <input type="text" name="imagem" class="form-control mb-2" placeholder="Caminho/URL da Imagem (ex: assets/img/novo.png)">
+      <textarea name="descricao" class="form-control mb-2" placeholder="Descrição curta" rows="2" required></textarea>
+      <textarea name="conteudo" class="form-control mb-3" placeholder="Conteúdo completo/detalhado" rows="4" required></textarea>
+      <button type="submit" class="btn btn-dark w-100">Cadastrar Álbum</button>
+    </form>
+
+    <div class="text-center mt-4">
+      <a href="index.html" class="btn btn-outline-secondary">Voltar</a>
+    </div>
+  </main>
+
+  <script>
+    const API_URL = "http://localhost:3000/albuns";
+    
+    document.getElementById("formAlbum").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      
+      // Converte os dados do formulário para um objeto JSON
+      const formData = new FormData(e.target);
+      const novoAlbum = Object.fromEntries(formData.entries());
+      
+      // Adiciona um ID temporário se precisar, embora o json-server crie automaticamente
+      // novoAlbum.id = Date.now(); 
+
+      try {
+        const res = await fetch(API_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(novoAlbum)
+        });
+
+        if (res.ok) {
+          alert("Álbum cadastrado com sucesso!");
+          // Redireciona para a home para ver o novo álbum na lista
+          window.location.href = 'index.html'; 
+        } else {
+          alert(`Erro ao cadastrar álbum: ${res.statusText}`);
+        }
+      } catch (error) {
+        console.error('Erro de conexão:', error);
+        alert("Erro ao conectar ao servidor. Verifique se o json-server está rodando.");
+      }
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
