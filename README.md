@@ -16,8 +16,8 @@ Sugerimos o uso das seguintes ferramentas acessíveis: [FullCalendar](https://fu
 
 **Print da tela com a implementação**
 
-<< Coloque aqui uma breve explicação da implementação feita nessa etapa>>
+Nesta etapa, foi criada uma nova página para exibir os dados dos álbuns de forma dinâmica usando a biblioteca Chart.js. A página faz uma leitura dos dados cadastrados no JSON Server, organiza as categorias dos álbuns e gera automaticamente um gráfico de barras que mostra a quantidade de álbuns por categoria. Assim, sempre que os dados são alterados no CRUD, o gráfico é atualizado e reflete as mudanças. Os prints mostram dois exemplos diferentes dessa visualização funcionando.
 
-<<  COLOQUE A IMAGEM TELA 1 AQUI >>
+![Print da Tela 1](./public/assets/img/prttela1.png)
 
-<<  COLOQUE A IMAGEM TELA 2 AQUI >>
+![Print da Tela 2](./public/assets/img/prttela2.png)
